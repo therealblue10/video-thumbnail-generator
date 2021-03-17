@@ -210,7 +210,7 @@ class ThumbnailImage extends StatelessWidget {
         "https://video-thumbnail-generator-pub.herokuapp.com/generate/thumbnail";
     try {
       http.Response response = await http.post(
-        url,
+        Uri(scheme: url),
         headers: {"Content-type": "application/json"},
         body: input,
       );
@@ -298,7 +298,7 @@ class VideoThumbnail {
         "https://video-thumbnail-generator-pub.herokuapp.com/generate/thumbnail";
     try {
       http.Response response = await http.post(
-        url,
+        Uri(scheme: url),
         headers: {"Content-type": "application/json"},
         body: input,
       );
